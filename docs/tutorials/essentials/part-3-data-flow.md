@@ -369,7 +369,8 @@ export const AddPostForm = () => {
   const onContentChanged = e => setContent(e.target.value)
 
   // highlight-start
-  const onSavePostClicked = () => {
+  const onSavePostClicked = (e) => {
+   e.preventDefault();
     if (title && content) {
       dispatch(
         postAdded({
